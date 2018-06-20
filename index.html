@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>AudioList Documantation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">AudioList API</span>
+    </nav>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Method</th>
+                <th scope="col">Usage</th>
+                <th scope="col">Parameters</th>
+                <th scope="col">Response</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">getAllSongs</th>
+                <td>GET</td>
+                <td>url/<b>getAllSongs</b></td>
+                <td>none</td>
+                <td>JSON</td>
+            </tr>
+            <tr>
+                <th scope="row">getSongById</th>
+                <td>POST</td>
+                <td>via post</td>
+                <td>id</td>
+                <td>JSON</td>
+            </tr>
+            <tr>
+                <th scope="row">getSongByPlayerAndYear</th>
+                <td>GET</td>
+                <td>url/<b>getSongByPlayerAndYear</b>/playerName&year</td>
+                <td>playerName, year</td>
+                <td>JSON</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="card text-white bg-dark mb-3" style="max-width: 33%">
+        <div class="card-header">Response JSON Format</div>
+        <div class="card-body">
+            <h5 class="card-title">Song</h5>
+            <p class="card-text">
+                {<br>
+                    &emsp;"id":&emsp;"1",<br>
+                    &emsp;"songName":&emsp;"Beat the drums",<br>
+                    &emsp;"year":&emsp;1998,<br>
+                    &emsp;"genre":&emsp;"African",<br>
+                    &emsp;"composer":&emsp;"African Drums and Soukouss",<br>
+                    &emsp;"players":<br>
+                    &emsp;&emsp;[<br>
+                        &emsp;&emsp;&emsp;{ "name": "Yaniv Yona",&emsp;&emsp;"role": "drummer" },<br>
+                        &emsp;&emsp;&emsp;{ "name": "Alon Golan",&emsp;&emsp;"role": "singer" },<br>
+                        &emsp;&emsp;&emsp;{ "name": "Roni Polisanov",&emsp;&emsp;"role": "guitarist" },<br>
+                        &emsp;&emsp;&emsp;{ "name": "Haim Elbaz",&emsp;&emsp;"role": "basist" }<br>
+                    &emsp;&emsp;]<br>
+                }
+            </p>
+        </div>
+</body>
+</html>
